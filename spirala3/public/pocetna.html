@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" href="slike/logo.png">
+    <title>Pocetna</title>
+    <link rel="stylesheet" href="pocetna.css">
+    <link rel="stylesheet" href="header.css">
+    <script src="pocetna.js"></script>
+    <script src="pozivi.js"></script>
+</head>
+<body onload="ucitajPrviPut('grid-box')">
+    <header id="header">
+        <div class="meni">
+            <div class="logo">
+                <img src="logo.png" alt="error">
+            </div>
+            <ul>
+                <li class="active"><a href="pocetna.html">Pocetna</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="unos.html">Unos</a></li>
+                <li><a href="rezervacija.html">Rezervacije</a></li>
+                <li><a href="#">Osobe</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="sadrzaj">
+        <div class="picture-grid">
+            <div class="grid-box" ><img/></div>
+            <div class="grid-box" ><img/></div>
+            <div class="grid-box" ><img/></div>
+        </div>
+        <form class="dugmad">
+            <input id="prosli" onclick="dajSLike('grid-box', this)" type="button" value="Prosli">
+            <input id="sljedeci" onclick="dajSLike('grid-box',this)" type="button" value="Sljedeci">
+        </form>
+    </div>
+</body>
