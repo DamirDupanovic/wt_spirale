@@ -1,0 +1,495 @@
+{
+  "testId" : "1-mobileunos.gspec",
+  "name" : "mobileUnos.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  mobileUnos.gspec --url C:/Users/Damir/Desktop/spirale/wt1916928/spirala1/unos.html --size 599x400 --htmlreport reports",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: mobileUnos.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573669575031,
+          "sections" : [ {
+            "name" : "Li",
+            "place" : {
+              "filePath" : "mobileUnos.gspec",
+              "lineNumber" : 9
+            },
+            "objects" : [ {
+              "name" : "li-meni-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 11
+                },
+                "name" : "above li-meni-2",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "li-meni-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "li-meni-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "li-meni-1", "li-meni-2" ]
+              } ]
+            }, {
+              "name" : "li-meni-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 13
+                },
+                "name" : "below li-meni-1",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "li-meni-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "li-meni-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "li-meni-2", "li-meni-1" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 14
+                },
+                "name" : "aligned vertically left li-meni-1",
+                "highlight" : [ "li-meni-2", "li-meni-1" ]
+              } ]
+            }, {
+              "name" : "li-meni-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 16
+                },
+                "name" : "below li-meni-2",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "li-meni-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "li-meni-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "li-meni-3", "li-meni-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "aligned vertically left li-meni-1",
+                "highlight" : [ "li-meni-3", "li-meni-1" ]
+              } ]
+            }, {
+              "name" : "li-meni-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "below li-meni-3",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "li-meni-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "li-meni-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "li-meni-4", "li-meni-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "aligned vertically left li-meni-1",
+                "highlight" : [ "li-meni-4", "li-meni-1" ]
+              } ]
+            }, {
+              "name" : "li-meni-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "below li-meni-4",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "li-meni-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "li-meni-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "li-meni-5", "li-meni-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "aligned vertically left li-meni-1",
+                "highlight" : [ "li-meni-5", "li-meni-1" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Header",
+            "place" : {
+              "filePath" : "mobileUnos.gspec",
+              "lineNumber" : 25
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "contains logo",
+                "highlight" : [ "header", "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Logo",
+            "place" : {
+              "filePath" : "mobileUnos.gspec",
+              "lineNumber" : 29
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "centered horizontally on header",
+                "highlight" : [ "logo", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "on top edge header -35px top",
+                "highlight" : [ "logo", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "labela",
+            "place" : {
+              "filePath" : "mobileUnos.gspec",
+              "lineNumber" : 34
+            },
+            "objects" : [ {
+              "name" : "labela-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "above input-1",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "input-1",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "8px"
+                } ],
+                "highlight" : [ "labela-1", "input-1" ]
+              } ]
+            }, {
+              "name" : "labela-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "above input-2",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "input-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "8px"
+                } ],
+                "highlight" : [ "labela-2", "input-2" ]
+              } ]
+            }, {
+              "name" : "labela-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "above input-3",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "input-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "8px"
+                } ],
+                "highlight" : [ "labela-3", "input-3" ]
+              } ]
+            }, {
+              "name" : "labela-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "above input-4",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "input-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "8px"
+                } ],
+                "highlight" : [ "labela-4", "input-4" ]
+              } ]
+            } ]
+          }, {
+            "name" : "input",
+            "place" : {
+              "filePath" : "mobileUnos.gspec",
+              "lineNumber" : 44
+            },
+            "objects" : [ {
+              "name" : "input-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 46
+                },
+                "name" : "below labela-1",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "input-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "8px"
+                } ],
+                "highlight" : [ "input-1", "labela-1" ]
+              } ]
+            }, {
+              "name" : "input-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "below labela-2",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "input-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "8px"
+                } ],
+                "highlight" : [ "input-2", "labela-2" ]
+              } ]
+            }, {
+              "name" : "input-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 50
+                },
+                "name" : "below labela-3",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "input-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "8px"
+                } ],
+                "highlight" : [ "input-3", "labela-3" ]
+              } ]
+            }, {
+              "name" : "input-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 52
+                },
+                "name" : "below labela-4",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "input-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "8px"
+                } ],
+                "highlight" : [ "input-4", "labela-4" ]
+              } ]
+            }, {
+              "name" : "input-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "below input-4",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "input-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "input-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "input-5", "input-4" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "labela-1" : {
+              "area" : [ 136, 284, 300, 18 ]
+            },
+            "input-1" : {
+              "area" : [ 138, 310, 183, 29 ]
+            },
+            "labela-2" : {
+              "area" : [ 136, 347, 300, 18 ]
+            },
+            "input-2" : {
+              "area" : [ 138, 373, 183, 29 ]
+            },
+            "labela-3" : {
+              "area" : [ 136, 410, 300, 18 ]
+            },
+            "labela-4" : {
+              "area" : [ 136, 473, 300, 18 ]
+            },
+            "li-meni-1" : {
+              "area" : [ 25, 130, 516, 18 ]
+            },
+            "input-3" : {
+              "area" : [ 138, 436, 183, 29 ]
+            },
+            "input-4" : {
+              "area" : [ 138, 499, 183, 29 ]
+            },
+            "input-5" : {
+              "area" : [ 243, 543, 70, 45 ]
+            },
+            "header" : {
+              "area" : [ 0, 70, 566, 195 ]
+            },
+            "logo" : {
+              "area" : [ 0, 105, 566, 0 ]
+            },
+            "li-meni-3" : {
+              "area" : [ 25, 176, 516, 18 ]
+            },
+            "li-meni-2" : {
+              "area" : [ 25, 153, 516, 18 ]
+            },
+            "li-meni-5" : {
+              "area" : [ 25, 222, 516, 18 ]
+            },
+            "li-meni-4" : {
+              "area" : [ 25, 199, 516, 18 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1573669569837,
+        "type" : "node"
+      } ],
+      "time" : 1573669563298,
+      "type" : "node"
+    } ]
+  }
+}

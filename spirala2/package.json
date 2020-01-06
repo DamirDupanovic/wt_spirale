@@ -1,0 +1,16 @@
+{
+  "name": "spirala1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "kalendar.js",
+  "scripts": {
+    "test": "mocha",
+    "unit": "mocha-webpack --webpack-config webpack.test.js  test/unit/*.spec.js --require test/setup.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
+}

@@ -1,0 +1,72 @@
+@objects
+    header header .meni
+    logo #header .meni .logo
+    sadrzaj .sadrzaj
+    li-meni-* #header .meni ul li
+    pictureGrid .sadrzaj .picture-grid
+    slika-* .picture-grid img
+
+= Li =
+    li-meni-1:
+        above li-meni-2
+    li-meni-2:
+        below li-meni-1
+        aligned vertically left li-meni-1
+    li-meni-3:
+        below li-meni-2
+        aligned vertically left li-meni-1
+    li-meni-4:
+        below li-meni-3
+        aligned vertically left li-meni-1
+    li-meni-5:
+        below li-meni-4
+        aligned vertically left li-meni-1
+
+= Header =
+    header:
+        contains logo
+
+= Logo =
+    logo:
+        centered horizontally on header
+        on top edge header -35px top
+
+= PictureGrid =
+    pictureGrid:
+        inside sadrzaj
+
+= Main =
+    global:
+        count any slika-* is 10 
+
+
+= Slike =
+    slika-1:
+        above slika-2
+        aligned vertically all slika-2
+    slika-2:
+        above slika-3
+        aligned vertically all slika-3
+    slika-3:
+        above slika-4
+        aligned vertically all slika-4
+    slika-4:
+        above slika-5
+        aligned vertically all slika-5
+    slika-5:
+        above slika-6
+        aligned vertically all slika-6
+    slika-6:
+        above slika-7
+        aligned vertically all slika-7
+    slika-7:
+        above slika-8
+        aligned vertically all slika-8
+    slika-8:
+        above slika-9
+        aligned vertically all slika-9
+    slika-9:
+        above slika-10
+        aligned vertically all slika-10
+    slika-10:
+        below slika-9

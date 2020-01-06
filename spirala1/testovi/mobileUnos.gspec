@@ -1,0 +1,54 @@
+@objects
+    header header .meni
+    logo #header .meni .logo
+    sadrzaj .sadrzaj
+    li-meni-* #header .meni ul li
+    labela-* .forma label
+    input-* .forma input
+
+= Li =
+    li-meni-1:
+        above li-meni-2
+    li-meni-2:
+        below li-meni-1
+        aligned vertically left li-meni-1
+    li-meni-3:
+        below li-meni-2
+        aligned vertically left li-meni-1
+    li-meni-4:
+        below li-meni-3
+        aligned vertically left li-meni-1
+    li-meni-5:
+        below li-meni-4
+        aligned vertically left li-meni-1
+
+= Header =
+    header:
+        contains logo
+
+= Logo =
+    logo:
+        centered horizontally on header
+        on top edge header -35px top
+
+= labela =
+    labela-1:
+        above input-1
+    labela-2:
+        above input-2
+    labela-3:
+        above input-3
+    labela-4:
+        above input-4
+
+= input =
+    input-1:
+        below labela-1
+    input-2:
+        below labela-2
+    input-3:
+        below labela-3
+    input-4:
+        below labela-4
+    input-5:
+        below input-4

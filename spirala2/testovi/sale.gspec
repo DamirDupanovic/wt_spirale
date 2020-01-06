@@ -1,0 +1,31 @@
+
+@objects
+    header header .meni
+    logo #header .meni .logo
+    tabela .sadrzaj .tabelaSala
+    sadrzaj .sadrzaj
+    slobodnaSala-* tbody .slobodnaSala
+    headerSprat-* .tabelaSala thead .headerSprat
+    headerRedni-* .tabelaSala tbody .headerRedni
+
+= Sprat =
+    headerSprat-1:
+       visible
+
+= Red =
+    headerRedni-*:
+        visible
+
+= Header =
+    header:
+        contains logo
+
+= Logo =
+    logo:
+        centered horizontally on header
+        on top edge header -35px top
+        
+
+= Tabela =
+    tabela:
+        centered horizontally inside sadrzaj

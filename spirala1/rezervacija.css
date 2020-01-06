@@ -1,0 +1,182 @@
+.sadrzaj{
+    margin-top: 5px;
+    background-color: #409CDD;
+}
+
+.rezervacija{
+    position: relative;
+    margin: auto;
+    width: 240px;
+    padding-top: 20px;
+}
+
+.rezervacija select,
+.rezervacija input[type=time]{
+    width: 100px;
+}
+
+.rezervacija select,
+.rezervacija input,
+.rezervacija label{
+    margin: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.rezervacija label{
+    display: inline-block;
+    width: 80px;
+}
+
+.kalendar{
+    position: relative;
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:#409CDD;
+    width: 435px;
+    height: 320px;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+}
+
+.kalendar .date{
+    width: 450px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.kalendar .date h3{
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.kalendar .date .days{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.s, .sedmica{
+    display: flex;
+    flex-direction: row;
+}
+
+.kalendar .date .days .day{
+    width: 44px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0px 5px 5px 0px;
+}
+
+.kalendar .date .days .sedmica .broj{
+    border: 1px solid black;
+    width: 44px;
+    height: 30px;
+    margin: 0px 5px 5px 0px;
+}
+
+.kalendar .date .days .slobodni{
+   background-color: green;
+}
+
+.kalendar .date .days .slobodni div,
+.kalendar .date .days .zauzeti div{
+    height: 20px;
+    border-bottom: 1px solid black;
+    background-color: white;
+    text-align: center;
+}
+
+
+.kalendar .date .days .zauzeti{
+    background-color: red;
+}
+
+.kalendar .date .days .sedmica .prazan{
+    background-color: 0;
+    border: 1px solid transparent;
+}
+
+.dugmad{
+    position: relative;
+    margin: auto;
+    width: 430px;
+    padding: 20px;
+}
+
+#sljedeci{
+    float: right;
+}
+
+.dugmad input[type=submit]{
+   background-color: #409CDD;
+   border: 2px solid #337cb0;
+   height: 45px;
+   width: 70px;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+@media screen and (max-width: 600px){
+    .kalendar{
+        position: relative;
+        margin:auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color:#409CDD;
+        width: 200px;
+        height: 360px;
+        justify-content: space-between;
+        align-items: center;
+        border: 3px solid white;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+    }
+
+    .kalendar .date{
+        width: 200px;
+        height: 360px;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .kalendar .date .days{
+        display: flex;
+        
+    }
+
+    .s, .sedmica{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sedmica:nth-child(-n+2),
+    .sedmica:nth-child(n+4){
+        display: none;
+    }
+
+    .kalendar .date .days .day{
+        width: 44px;
+        height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        margin: 0px 0px 20px 0px; 
+    }
+
+    .kalendar .date .days .sedmica .broj{
+        border: 1px solid black;
+        width: 44px;
+        height: 30px;
+        margin: 0px 5px 5px 5px;
+    }
+}
