@@ -8,7 +8,6 @@ var db= require('./db/baza.js');
 db.sequelize.sync({force:true}).then(function(){
     inicializacija().then(function(){
         console.log("Gotovo kreiranje tabela i ubacivanje pocetnih podataka!");
-        //process.exit();
     });
 });
 
@@ -31,11 +30,10 @@ function inicializacija(){
             var osoba1 = osoblje.filter(function(a){return a.ime==='Neko'})[0].dataValues.id;
             var osoba2 = osoblje.filter(function(a){return a.ime==='Drugi'})[0].dataValues.id;
             var osoba3 = osoblje.filter(function(a){return a.ime==='Test'})[0].dataValues.id;
-           //console.log(osoblje, osoba1);
+            
             Promise.all(listaPromiseaTermina).then(function(termini){
                 var termin1 = termini.filter(function(t){return t.id==1})[0].dataValues.id;
                 var termin2 = termini.filter(function(t){return t.id==2})[0].dataValues.id;
-                //console.log(termini, termin1);
 
                 listaPromiseaSala.push(
                     db.sala.create({naziv:"1-11"}).then(function(s){
@@ -69,9 +67,7 @@ function inicializacija(){
                 
                     listaPromiseaRezervacija.push(
                         db.rezervacije.create({}).then(function(r){
-                            //console.log(r);
                             return r.setTermin([termin2]).then(function(r){
-                                //console.log(termin2, sala1);
                                 return r.setSala([sala1]).then(function(r){
                                     return r.setOsoblje([osoba3]).then(function(){
                                         return new Promise(function(resolve,reject){resolve(r);});
@@ -120,7 +116,6 @@ function napraviZauzeca(rez, ter, sal){
     var vanredna = [];
     var idSale;
     var nazivSale;
-    //console.log(rez.dataValues, ter.dataValues,sal.dataValues)
     for(let i=0; i<ter.length; i++){
         for(let j=0; j< rez.length; j++){
             if(rez[j].dataValues.terminId == ter[i].dataValues.id){
@@ -160,7 +155,6 @@ function napraviZauzeca(rez, ter, sal){
 }
 
 app.get('/zauzeca', function(req, res){
-    //res.sendFile('zauzeca.json', { root: __dirname + '/baza'});
     var zauzeca = {};
 
     db.rezervacije.findAll().then(rez => {
@@ -168,7 +162,6 @@ app.get('/zauzeca', function(req, res){
            db.sala.findAll().then(sal =>{
                 
             zauzeca = napraviZauzeca(rez, ter, sal);
-            //console.log(zauzeca);
             res.status(200);
             res.send(JSON.stringify(zauzeca));
            }).catch(function(err){
@@ -184,10 +177,7 @@ app.get('/zauzeca', function(req, res){
         res.send("Rezultati error " + err);
     });
 });
-//sp 4 zadatak 2
 app.post('/rezervisiSalu', function(req, res){
-    //console.log(req.body.termin);
-    //ovaj kod je mogau pozivima biti
     var daniUSedmici = ['ponedeljkom', 'utorkom', 'srijedom', 'cetvrtkom', 'petkom', 'subotom', 'nedeljom'];
     let tijelo = req.body;
     var sala = tijelo.sala;
@@ -199,11 +189,9 @@ app.post('/rezervisiSalu', function(req, res){
     var datum2 = "";
     let dan1= new Date(datum).getDate();
     let datum1=[];
-    //vraca prvi n-ti dan
     while(dan1 > 7){
         dan1=dan1 - 7;
     }
-    //pravi niz stringova datuma sa n-tim dano u sedmici
     while(dan1<new Date(datum.getFullYear(), datum.getMonth(), 0).getDate()){
         let datumPomocni=new Date(datum.getFullYear(), datum.getMonth(), dan1);
         let datePomocni = datumPomocni.getDate();
@@ -215,7 +203,6 @@ app.post('/rezervisiSalu', function(req, res){
         dan1=dan1+7;
     }
 
-    //mjenja nedelju za ponedeljak kao 0-ti dan
     if(dan==0){
         dan=6;
     }else{
@@ -244,10 +231,8 @@ app.post('/rezervisiSalu', function(req, res){
         kraj: termin.kraj
     }
     console.log(terminPeriodicni, terminVanredni, datum1, datum2);
-    //console.log(datum);
     db.sala.findOne({where:{naziv:sala.naziv}}).then((sala)=>{
         db.termin.findOne({where:{
-            //provjerava ima li periodicnih i vanrednih termina za dati datum i vrijeme
             [Op.or]:[
                 {
                     redovni: terminVanredni.redovni,
@@ -269,11 +254,7 @@ app.post('/rezervisiSalu', function(req, res){
                 }
             ]
         }}).then(ter=>{
-            //console.log(ter.dataValues);
             if(ter!=null){
-                //postoji termin -- pa mora biti i rezervacija
-                //console.log(ter.dataValues);
-                //ovdje nastavljas
                 db.rezervacije.findOne({where:{
                         terminId: ter.id,
                         salaId: sala.id
@@ -285,7 +266,6 @@ app.post('/rezervisiSalu', function(req, res){
                     }).catch(function(err){console.log("Osoblje error: " + err);})
                 }).catch(function(err){console.log("Rezervacija error: " + err);})
             }else{
-                //ne postoji terin pa ni rezervacija -- ovdje ga kreiramo i dodajemo u bazu kao i rezervaciju
                 db.termin.create({
                     redovni:termin.redovni,
                     dan: (termin.redovni)? dan:null,
@@ -294,7 +274,6 @@ app.post('/rezervisiSalu', function(req, res){
                     pocetak: termin.pocetak,
                     kraj: termin.kraj
                 }).then((tr)=>{
-                    //console.log(tr)
                     db.rezervacije.create({}).then(r =>{
                         r.setTermin([tr.dataValues.id]).then(r=>{
                             r.setSala([sala.dataValues.id]).then(r=>{
@@ -307,7 +286,6 @@ app.post('/rezervisiSalu', function(req, res){
                                         db.sala.findAll().then(sal =>{
                                                 
                                             zauzeca = napraviZauzeca(rez, ter, sal);
-                                            //console.log(zauzeca);
                                             res.status(200);
                                             res.send(JSON.stringify(zauzeca));
                                         }).catch(function(err){
@@ -350,12 +328,8 @@ app.post('/rezervisiSalu', function(req, res){
 
 app.get('/dajSliku', function(req, res){
     var imena = fs.readdirSync(__dirname+'/baza/slike');
-    //console.log(req.query.red);
-    //koristen red
     let red = req.query.red;
-    //koristen red
     let triImenaSlika = imena.slice(3*red-3, red*3);
-    //console.log(triImenaSlika);
     var obj ={};
     for(let i=0; i<triImenaSlika.length; i++){
         var slika= fs.readFileSync(__dirname + '/baza/slike/'+ triImenaSlika[i]);
@@ -370,7 +344,6 @@ app.get('/dajSliku', function(req, res){
 });
 
 
-//spirala 4 Z1
 app.get('/osoblje', function(req, res){
     db.osoblje.findAll().then(osoblje=>{
         res.send(JSON.stringify(osoblje));
@@ -378,38 +351,30 @@ app.get('/osoblje', function(req, res){
     
 });
 
-//sp4 z3
 app.get('/osobljeZauzeca', function(req, res){
     var vrijeme = req.query.vrijeme;
     var datum = req.query.datum;
     var dan = parseInt(req.query.dan);
     var osobaSalaTekst=[];
-    //dohvati sve pa for petljama pretrazi sve dzumbus kod
     db.rezervacije.findAll().then(rez =>{
         db.termin.findAll().then(ter=>{
             db.sala.findAll().then(sal=>{
                 db.osoblje.findAll().then(os=>{
-                    //console.log(rez[0], rez[1]);
                     for(let i=0; i<os.length; i++){
                         let osoba = os[i].dataValues;
                         let nazivSale;
                         let nadjenTermin = false;
                         for(let j=0; j<rez.length; j++){
                             let rezervacija = rez[j].dataValues;
-                            //ako osoba ima rezervaciju
                             if(osoba.id == rezervacija.osobljeId){
-                                //trazimo salu
                                 for(let k=0; k<sal.length; k++){
                                     if(sal[k].dataValues.id==rezervacija.salaId){
                                         nazivSale = sal[k].dataValues.naziv;
                                     }
                                 }
-                                //pa trazimo termin
                                 for(let h=0; h<ter.length; h++){
                                     if(ter[h].dataValues.id == rezervacija.terminId){
                                         let termin = ter[h].dataValues;
-                                        //console.log(termin);
-                                        //ako je vandredni prvojeri datum
                                         if(termin.dan == null && termin.datum != null){
                                             if(datum == termin.datum && (vrijeme==termin.pocetak || vrijeme==termin.kraj || (vrijeme>termin.pocetak && vrijeme<termin.kraj))){
                                                 nadjenTermin = true;
@@ -417,7 +382,6 @@ app.get('/osobljeZauzeca', function(req, res){
                                             }
                                             
                                         }else if(termin.dan != null && termin.datum ==null){
-                                            //termin nije vanredan provjeri dan
 
                                             if(dan == termin.dan && (vrijeme==termin.pocetak || vrijeme==termin.kraj || (vrijeme>termin.pocetak && vrijeme<termin.kraj))){
                                                nadjenTermin = true;
@@ -425,10 +389,8 @@ app.get('/osobljeZauzeca', function(req, res){
                                             }
                                         }
                                     }
-                                    //h
                                 }
                             }
-                            //j
                         }
                         if(nadjenTermin){
                             osobaSalaTekst.push({osobaSalaTekst:`${osoba.ime} ${osoba.prezime} je u ${nazivSale}`});
@@ -442,8 +404,7 @@ app.get('/osobljeZauzeca', function(req, res){
             })
         })
     })
-    
-    //res.send(vrijeme);
+
 });
 
 app.listen(8080);
