@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.meni{
+    margin-top: 70px;
+    position: relative;
+    background-color: #409CDD;
+    padding: 35px 0px 0px 0px;
+}
+
+.meni .logo img{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    bottom: 70%;
+    background-color: white;
+}
+
+ul li{
+    display: inline;
+}
+
+ul{
+    list-style-type: none;
+    padding: 20px;
+}
+
+ul li a{
+    text-decoration: none;
+    /*color*/
+    padding: 5px 10px;
+    transition: 0.6s ease;
+}
+
+ul li.active a{
+    background-color: #ffffff;
+    color: black;
+}
+
+ul li a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+@media screen and (max-width: 600px) {
+    ul li{
+        display: block;
+        margin: 5px;
+    }
+}

@@ -1,0 +1,367 @@
+{
+  "testId" : "1-rezervacija.gspec",
+  "name" : "rezervacija.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  rezervacija.gspec --url C:/Users/Damir/Desktop/spirale/wt1916928/spirala1/rezervacija.html --size 1366x786 --htmlreport reports",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: rezervacija.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573669643029,
+          "sections" : [ {
+            "name" : "Header",
+            "place" : {
+              "filePath" : "rezervacija.gspec",
+              "lineNumber" : 12
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 14
+                },
+                "name" : "contains logo",
+                "highlight" : [ "header", "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Logo",
+            "place" : {
+              "filePath" : "rezervacija.gspec",
+              "lineNumber" : 16
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "centered horizontally on header",
+                "highlight" : [ "logo", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "on top edge header -35px top",
+                "highlight" : [ "logo", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Rezervacija",
+            "place" : {
+              "filePath" : "rezervacija.gspec",
+              "lineNumber" : 21
+            },
+            "objects" : [ {
+              "name" : "rezervacija",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "above kalendar",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "rezervacija",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "kalendar",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "20px"
+                } ],
+                "highlight" : [ "rezervacija", "kalendar" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Sedmica",
+            "place" : {
+              "filePath" : "rezervacija.gspec",
+              "lineNumber" : 25
+            },
+            "objects" : [ {
+              "name" : "sedmica-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "below dani",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sedmica-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "dani",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "sedmica-1", "dani" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "aligned vertically left dani",
+                "highlight" : [ "sedmica-1", "dani" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "aligned vertically right dani",
+                "highlight" : [ "sedmica-1", "dani" ]
+              } ]
+            }, {
+              "name" : "sedmica-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "below dani",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sedmica-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "dani",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "37px"
+                } ],
+                "highlight" : [ "sedmica-2", "dani" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "aligned vertically left dani",
+                "highlight" : [ "sedmica-2", "dani" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "aligned vertically right dani",
+                "highlight" : [ "sedmica-2", "dani" ]
+              } ]
+            }, {
+              "name" : "sedmica-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "below dani",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sedmica-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "dani",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "74px"
+                } ],
+                "highlight" : [ "sedmica-3", "dani" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "aligned vertically left dani",
+                "highlight" : [ "sedmica-3", "dani" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "aligned vertically right dani",
+                "highlight" : [ "sedmica-3", "dani" ]
+              } ]
+            }, {
+              "name" : "sedmica-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "below dani",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sedmica-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "dani",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "111px"
+                } ],
+                "highlight" : [ "sedmica-4", "dani" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "aligned vertically left dani",
+                "highlight" : [ "sedmica-4", "dani" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "aligned vertically right dani",
+                "highlight" : [ "sedmica-4", "dani" ]
+              } ]
+            }, {
+              "name" : "sedmica-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "below dani",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sedmica-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "dani",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "148px"
+                } ],
+                "highlight" : [ "sedmica-5", "dani" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "aligned vertically left dani",
+                "highlight" : [ "sedmica-5", "dani" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "aligned vertically right dani",
+                "highlight" : [ "sedmica-5", "dani" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Dugmad",
+            "place" : {
+              "filePath" : "rezervacija.gspec",
+              "lineNumber" : 31
+            },
+            "objects" : [ {
+              "name" : "div-dugmad",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "rezervacija.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "below kalendar",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "div-dugmad",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "kalendar",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "20px"
+                } ],
+                "highlight" : [ "div-dugmad", "kalendar" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "rezervacija" : {
+              "area" : [ 546, 168, 240, 185 ]
+            },
+            "dani" : {
+              "area" : [ 479, 454, 357, 22 ]
+            },
+            "sedmica-3" : {
+              "area" : [ 479, 550, 357, 37 ]
+            },
+            "header" : {
+              "area" : [ 0, 70, 1333, 93 ]
+            },
+            "logo" : {
+              "area" : [ 0, 105, 1333, 0 ]
+            },
+            "sedmica-4" : {
+              "area" : [ 479, 587, 357, 37 ]
+            },
+            "sedmica-1" : {
+              "area" : [ 479, 476, 357, 37 ]
+            },
+            "sedmica-2" : {
+              "area" : [ 479, 513, 357, 37 ]
+            },
+            "div-dugmad" : {
+              "area" : [ 431, 719, 470, 85 ]
+            },
+            "kalendar" : {
+              "area" : [ 446, 373, 441, 326 ]
+            },
+            "sedmica-5" : {
+              "area" : [ 479, 624, 357, 37 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1573669637826,
+        "type" : "node"
+      } ],
+      "time" : 1573669631561,
+      "type" : "node"
+    } ]
+  }
+}

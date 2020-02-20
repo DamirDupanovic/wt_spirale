@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" href="./logo.png">
+    <title>Rezervacija</title>
+    <link rel="stylesheet" href="rezervacija.css">
+    <link rel="stylesheet" href="header.css">
+    <script src="rezervacije.js"></script>
+    <script src="kalendar.js"></script>
+    <script src="pozivi.js"></script>
+    <script src="pomocni.js"></script>
+</head>
+<body onload="ucitajPodatke(); ucitajKalendar('date');">
+    <h1 id="mrs"></h1>
+    <header id="header">
+        <div class="meni">
+            <div class="logo">
+                <img src="logo.png" alt="error">
+            </div>
+            <ul>
+                <li><a href="pocetna.html">Pocetna</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="unos.html">Unos</a></li>
+                <li class="active"><a href="rezervacija.html">Rezervacije</a></li>
+                <li><a href="osoblje.html">Osobe</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="sadrzaj">
+        <form class="forma-kalendar">
+            <div class="rezervacija">
+                <label>Sale</label>
+                <select name="Sale" 
+                    onchange="pozoviObojiZauzeto('Sale', 'pocetak', 'kraj', 'date')">
+                    <option value="1-11">1-11</option>
+                    <option value="1-15">1-15</option>
+                </select><br>
+                <label>Periodicno</label><input type="checkbox" name="periodicnoRadio" value="periodicno" 
+                    onchange="pozoviObojiZauzeto('Sale', 'pocetak', 'kraj', 'date')"><br>
+                <label>Pocetak</label><input type="time" name="pocetak" 
+                    onchange="pozoviObojiZauzeto('Sale', 'pocetak', 'kraj', 'date')"><br>
+                <label>Kraj</label><input type="time" name="kraj" 
+                    onchange="pozoviObojiZauzeto('Sale', 'pocetak', 'kraj', 'date')"><br>
+                <label>Osoblje</label><select id="osoblje" name="Osoblje" 
+                    onchange="pozoviObojiZauzeto('Sale', 'pocetak', 'kraj', 'date')">
+                   
+                </select>
+            </div>  
+
+            <div class="kalendar">
+                <div class="date">
+                   <!-- <h3>Novembar</h3>
+                    <div class="days">
+                        <div class="s">
+                                <div class="day">PON</div>
+                                <div class="day">UTO</div>
+                                <div class="day">SRI</div>
+                                <div class="day">CET</div>
+                                <div class="day">PET</div>
+                                <div class="day">SUB</div>
+                                <div class="day">NED</div>
+                        </div>
+                            <div class="sedmica">
+                                <div class="broj prazan"></div>
+                                <div class="broj prazan"></div>
+                                <div class="broj prazan"></div>
+                                <div class="broj prazan"></div>
+                                <div class="broj slobodni 1" onclick="mojafunk()">
+                                    <div calss="unutra">1</div>
+                                </div>
+                                <div class="broj slobodni 2" onclick="mojafunk()">
+                                        <div calss="unutra">2</div>
+                                </div>
+                                <div class="broj slobodni 3" onclick="mojafunk()">
+                                        <div calss="unutra">3</div>
+                                </div> 
+                            </div>   
+                            <div class="sedmica">
+                                <div class="broj slobodni 4" onclick="mojafunk()">
+                                    <div calss="unutra">4</div>
+                                </div>
+                                <div class="broj slobodni 5" onclick="mojafunk()">
+                                        <div calss="unutra">5</div>
+                                </div>
+                                <div class="broj slobodni 6" onclick="mojafunk()">
+                                        <div calss="unutra">6</div>
+                                </div>
+                                <div class="broj slobodni 7" onclick="mojafunk()">
+                                        <div calss="unutra">7</div>
+                                </div>
+                                <div class="broj slobodni 8" onclick="mojafunk()">
+                                        <div calss="unutra">8</div>
+                                </div>
+                                <div class="broj slobodni 9" onclick="mojafunk()">
+                                        <div calss="unutra">9</div>
+                                </div>    
+                                <div class="broj slobodni 10" onclick="mojafunk()">
+                                        <div calss="unutra">10</div>
+                                </div>
+                            </div>
+                            <div class="sedmica">
+                                <div class="broj slobodni 11" onclick="mojafunk()">
+                                    <div calss="unutra">11</div>
+                                </div>
+                                <div class="broj slobodni 12" onclick="mojafunk()">
+                                        <div calss="unutra">12</div>
+                                </div>
+                                <div class="broj slobodni 13" onclick="mojafunk()">
+                                    <div calss="unutra">13</div>
+                                </div>
+                                <div class="broj slobodni 14" onclick="mojafunk()">
+                                        <div calss="unutra">14</div>
+                                </div>
+                                <div class="broj slobodni 15" onclick="mojafunk()">
+                                        <div calss="unutra">15</div>
+                                </div>    
+                                <div class="broj slobodni 16" onclick="mojafunk()">
+                                        <div calss="unutra">16</div>
+                                </div>
+                                <div class="broj slobodni 17" onclick="mojafunk()">
+                                        <div calss="unutra">17</div>
+                                </div>
+                            </div>
+                            <div class="sedmica">
+                                <div class="broj slobodni 18" onclick="mojafunk()">
+                                    <div calss="unutra">18</div>
+                                </div>
+                                <div class="broj slobodni 19" onclick="mojafunk()">
+                                        <div calss="unutra">19</div>
+                                </div>
+                                <div class="broj slobodni 20" onclick="mojafunk()">
+                                        <div calss="unutra">20</div>
+                                </div>
+                                <div class="broj slobodni 21" onclick="mojafunk()">
+                                    <div calss="unutra">21</div>
+                                </div>
+                                <div class="broj slobodni 22" onclick="mojafunk()">
+                                        <div calss="unutra">22</div>
+                                </div>
+                                <div class="broj slobodni 23" onclick="mojafunk()">
+                                        <div calss="unutra">23</div>
+                                </div>    
+                                <div class="broj slobodni 24" onclick="mojafunk()">
+                                        <div calss="unutra">24</div>
+                                </div>
+                            </div>
+                           <div class="sedmica">
+                                <div class="broj slobodni 25" onclick="mojafunk()">
+                                    <div calss="unutra">25</div>
+                                </div>
+                                <div class="broj slobodni 26" onclick="mojafunk()">
+                                    <div calss="unutra">26</div>
+                                </div>
+                                <div class="broj slobodni 27" onclick="mojafunk()">
+                                    <div calss="unutra">27</div>
+                                </div>
+                                <div class="broj slobodni 28" onclick="mojafunk()">
+                                    <div calss="unutra">28</div>
+                                </div>    
+                                <div class="broj slobodni 29" onclick="mojafunk()">
+                                    <div calss="unutra">29</div>
+                                </div>
+                                <div class="broj slobodni 30" onclick="mojafunk()">
+                                    <div calss="unutra">30</div>
+                                </div>
+                                <div class="broj prazan"></div>
+                           </div>
+                        </div>-->
+                </div>
+            </div>
+           <div class="dugmad">
+                <input id="prosli" 
+                    onclick="mijenjajKalendar(this, 'mjesec', 'date');
+                        pozoviObojiZauzeto('Sale', 'pocetak', 'kraj', 'date')" 
+                            type="button" value="Prosli">
+                <input id="sljedeci" 
+                    onclick='mijenjajKalendar(this, "mjesec", "date");
+                        pozoviObojiZauzeto("Sale", "pocetak", "kraj", "date")' 
+                            type="button" value="Sljedeci">
+           </div>
+        </form>
+    </div>
+</body>

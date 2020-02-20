@@ -1,0 +1,303 @@
+{
+  "testId" : "1-unos.gspec",
+  "name" : "unos.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  unos.gspec --url C:/Users/Damir/Desktop/spirale/wt1916928/spirala1/unos.html --size 1366x786 --htmlreport reports",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: unos.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573669558798,
+          "sections" : [ {
+            "name" : "Header",
+            "place" : {
+              "filePath" : "unos.gspec",
+              "lineNumber" : 9
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 11
+                },
+                "name" : "contains logo",
+                "highlight" : [ "header", "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Logo",
+            "place" : {
+              "filePath" : "unos.gspec",
+              "lineNumber" : 13
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "centered horizontally on header",
+                "highlight" : [ "logo", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 16
+                },
+                "name" : "on top edge header -35px top",
+                "highlight" : [ "logo", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "labela",
+            "place" : {
+              "filePath" : "unos.gspec",
+              "lineNumber" : 18
+            },
+            "objects" : [ {
+              "name" : "labela-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "left-of input-1",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-1",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "input-1",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "10px"
+                } ],
+                "highlight" : [ "labela-1", "input-1" ]
+              } ]
+            }, {
+              "name" : "labela-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "left-of input-2",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-2",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "input-2",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "10px"
+                } ],
+                "highlight" : [ "labela-2", "input-2" ]
+              } ]
+            }, {
+              "name" : "labela-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "left-of input-3",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-3",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "input-3",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "10px"
+                } ],
+                "highlight" : [ "labela-3", "input-3" ]
+              } ]
+            }, {
+              "name" : "labela-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "left-of input-4",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-4",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "input-4",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "10px"
+                } ],
+                "highlight" : [ "labela-4", "input-4" ]
+              } ]
+            } ]
+          }, {
+            "name" : "input",
+            "place" : {
+              "filePath" : "unos.gspec",
+              "lineNumber" : 28
+            },
+            "objects" : [ {
+              "name" : "input-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "below input-1",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "input-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "input-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "10px"
+                } ],
+                "highlight" : [ "input-2", "input-1" ]
+              } ]
+            }, {
+              "name" : "input-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "below input-2",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "input-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "input-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "10px"
+                } ],
+                "highlight" : [ "input-3", "input-2" ]
+              } ]
+            }, {
+              "name" : "input-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "below input-3",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "input-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "input-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "10px"
+                } ],
+                "highlight" : [ "input-4", "input-3" ]
+              } ]
+            }, {
+              "name" : "input-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "unos.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "below input-4",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "input-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "input-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "input-5", "input-4" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "input-3" : {
+              "area" : [ 630, 278, 183, 29 ]
+            },
+            "input-4" : {
+              "area" : [ 630, 317, 183, 29 ]
+            },
+            "input-5" : {
+              "area" : [ 735, 361, 70, 45 ]
+            },
+            "header" : {
+              "area" : [ 0, 70, 1350, 93 ]
+            },
+            "logo" : {
+              "area" : [ 0, 105, 1350, 0 ]
+            },
+            "labela-1" : {
+              "area" : [ 530, 205, 90, 18 ]
+            },
+            "input-1" : {
+              "area" : [ 630, 200, 183, 29 ]
+            },
+            "labela-2" : {
+              "area" : [ 530, 244, 90, 18 ]
+            },
+            "input-2" : {
+              "area" : [ 630, 239, 183, 29 ]
+            },
+            "labela-3" : {
+              "area" : [ 530, 283, 90, 18 ]
+            },
+            "labela-4" : {
+              "area" : [ 530, 322, 90, 18 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1573669554320,
+        "type" : "node"
+      } ],
+      "time" : 1573669547690,
+      "type" : "node"
+    } ]
+  }
+}

@@ -1,0 +1,35 @@
+@objects
+    header header .meni
+    logo #header .meni .logo
+    sadrzaj .sadrzaj
+    li-meni-* #header .meni ul li
+    rezervacija .forma-kalendar .rezervacija
+    kalendar .forma-kalendar .kalendar
+    div-dugmad .forma-kalendar .dugmad
+    sedmica-* .forma-kalendar .kalendar .date .days .sedmica
+    dani .forma-kalendar .kalendar .date .days .s
+
+= Header =
+    header:
+        contains logo
+
+= Logo =
+    logo:
+        centered horizontally on header
+        on top edge header -35px top
+
+= Rezervacija =
+    rezervacija:
+        above kalendar
+
+= Sedmica =
+    sedmica-*:
+        below dani
+        aligned vertically left dani
+        aligned vertically right dani
+
+= Dugmad =
+    div-dugmad:
+        below kalendar
+
+
